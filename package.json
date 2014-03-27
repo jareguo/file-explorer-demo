@@ -1,0 +1,11 @@
+{
+    "name": "File Explorer",
+    "description": "",
+    "version": "",
+    "main": "index.html",
+    "window": {
+        "toolbar": true,
+        "width": 800,
+        "height": 450
+    }
+}
