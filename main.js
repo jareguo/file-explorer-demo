@@ -13,7 +13,7 @@ $(document).ready(function () {
     addressbar.set(process.cwd());
 
     folder.on('navigate', function (dir, mime) {
-        if (!mime || mime.type == 'folder') {
+        if (!mime || mime.type == 'folder' || mime.type == 'drive') {
             addressbar.enter(mime);
         }
         else {
