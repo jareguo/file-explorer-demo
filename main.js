@@ -1,7 +1,11 @@
+﻿// export shell for nodejs
+global.shell = require('nw.gui').Shell;
+// start server
+require('server/index');
 
-var shell = require('nw.gui').Shell;
 // golbal varialbes
 global.$ = $;
+global.SERVER_URL = 'http://localhost:8888/';
 var defaultPath = process.cwd();
 
 // import
@@ -20,7 +24,10 @@ $(document).ready(function () {
             addressbar.enter(filepath);
         }
         else {
-            shell.openItem(filepath);
+            $.get(global.SERVER_URL + "open", { path: filepath })
+                .error(function () {
+                    window.alert('failed to open: ' + filepath);
+                });
         }
     });
 
