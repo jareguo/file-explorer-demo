@@ -31,7 +31,7 @@ $(document).ready(function () {
 
     function openDir(dir) {
         if (dir && dir.slice(-1) != path.sep) {
-            dir += path.sep;    // 如果不以/结尾，D:会被path.normalize转成D:.
+            dir += path.sep;    // 如果不以/结尾，"D:"会被path.normalize转成"D:."
         }
         // TODO: extract them into an abstract base interface
         addressbar.set(dir);
