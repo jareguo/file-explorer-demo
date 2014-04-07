@@ -4,26 +4,30 @@
     <title>File Explorer</title>
     <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <script type="text/javascript" src="lib/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="lib/jquery-1.11.0.js"></script>
+    <!-- jsTree -->
+    <link rel="stylesheet" href="lib/jstree/themes/default/style.min.css" />
+    <script type="text/javascript" src="lib/jstree/jstree.js"></script>
+    <!-- Main -->
     <script type="text/javascript" src="main.js"></script>
 </head>
 <body>
-<div style="position: absolute; left: 10px; right: 10px; top: 10px; bottom: 10px;">
-    <div class="well" style="float: left; width: 160px; padding: 8px;">
+<div style="position: absolute; left: 5px; right: 4px; top: 5px; bottom: 0px;">
+    <div class="well" style="float: left; width: 160px; padding: 5px; position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px;">
         <ul class="nav nav-list">
             <li class="nav-header">Favorites</li>
             <li class="active"><a href="#"><i class="icon-white icon-home"></i> Home </a></li>
             <li><a href="#"><i class="icon-book"></i> Documents </a></li>
             <li><a href="#"><i class="icon-picture"></i> Pictures </a></li>
             <li class="divider"></li>
-            <li class="nav-header"> (TODO: Tree) </li>
         </ul>
+        <div id="tree" style="overflow: auto; position: absolute; left: 0px; right: 0px; top: 120px; bottom: -14px;"></div>
     </div>
-    <div style="float: left; position: absolute; left: 210px; right: 0; top: 0; bottom: 50px">
+    <div style="float: left; position: absolute; left: 200px; right: 0; top: 0; bottom: 46px">
         <div class="row">
             <ul id="addressbar" class="breadcrumb">Loading...</ul>
         </div>
-        <div class="row" style="background: #FFF; -webkit-border-radius: 2px; margin: -5px 1px 0 -19px; height: 100%; overflow: auto">
+        <div class="row" style="background: #FFF; -webkit-border-radius: 2px; margin: -12px 1px 0px -19px; height: 100%; overflow: auto">
             <ul style="margin: 5px;" id="files">Loading...</ul>
         </div>
     </div>
